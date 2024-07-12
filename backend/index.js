@@ -13,7 +13,7 @@ app.use(express.json());
 connectDatabase();
 
 const corsOptions = {
-  origin: ["https://fin-z-app.vercel.app", "http://localhost:5173"],
+  origin: ["https://www.expensemonitorimarticus.com/", "https://expense-tracker-project-imarticus.vercel.app/"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  // Corrected here
   credentials: true,
@@ -23,7 +23,7 @@ app.use(cors(corsOptions));
 
 // Middleware for setting headers
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "https://expense-tracker-project-imarticus.vercel.app/");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
   next();
